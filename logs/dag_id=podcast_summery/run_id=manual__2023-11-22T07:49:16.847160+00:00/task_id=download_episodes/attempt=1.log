@@ -1,0 +1,63 @@
+[2023-11-22T13:34:27.981+0545] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: podcast_summery.download_episodes manual__2023-11-22T07:49:16.847160+00:00 [queued]>
+[2023-11-22T13:34:27.986+0545] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: podcast_summery.download_episodes manual__2023-11-22T07:49:16.847160+00:00 [queued]>
+[2023-11-22T13:34:27.986+0545] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-11-22T13:34:27.995+0545] {taskinstance.py:1382} INFO - Executing <Task(_PythonDecoratedOperator): download_episodes> on 2023-11-22 07:49:16.847160+00:00
+[2023-11-22T13:34:27.998+0545] {standard_task_runner.py:57} INFO - Started process 258358 to run task
+[2023-11-22T13:34:28.000+0545] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'podcast_summery', 'download_episodes', 'manual__2023-11-22T07:49:16.847160+00:00', '--job-id', '197', '--raw', '--subdir', 'DAGS_FOLDER/podcast_summery.py', '--cfg-path', '/tmp/tmpcogztijv']
+[2023-11-22T13:34:28.001+0545] {standard_task_runner.py:85} INFO - Job 197: Subtask download_episodes
+[2023-11-22T13:34:28.023+0545] {task_command.py:416} INFO - Running <TaskInstance: podcast_summery.download_episodes manual__2023-11-22T07:49:16.847160+00:00 [running]> on host dwarka.dwarka
+[2023-11-22T13:34:28.072+0545] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='podcast_summery' AIRFLOW_CTX_TASK_ID='download_episodes' AIRFLOW_CTX_EXECUTION_DATE='2023-11-22T07:49:16.847160+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-11-22T07:49:16.847160+00:00'
+[2023-11-22T13:34:28.073+0545] {logging_mixin.py:154} INFO - episodes/happy-birthday-chatgpt.mp3
+[2023-11-22T13:34:28.073+0545] {logging_mixin.py:154} INFO - episodes/whats-next-for-the-artificial-intelligence-industry.mp3
+[2023-11-22T13:34:28.073+0545] {logging_mixin.py:154} INFO - episodes/capitol-hill-doesnt-love-this-crop-insurance-program-some-farmers-say-they-need-it.mp3
+[2023-11-22T13:34:28.074+0545] {logging_mixin.py:154} INFO - episodes/the-calm-after-the-employment-storm.mp3
+[2023-11-22T13:34:28.074+0545] {logging_mixin.py:154} INFO - episodes/milton-friedmans-impact.mp3
+[2023-11-22T13:34:28.074+0545] {logging_mixin.py:154} INFO - episodes/climate-change-could-heat-up-long-term-inflation.mp3
+[2023-11-22T13:34:28.074+0545] {logging_mixin.py:154} INFO - episodes/once-again-a-shutdown-looms.mp3
+[2023-11-22T13:34:28.074+0545] {logging_mixin.py:154} INFO - episodes/consumers-are-feeling-scrooge-y-about-the-economy-will-they-spend-less-for-the-holidays.mp3
+[2023-11-22T13:34:28.074+0545] {logging_mixin.py:154} INFO - episodes/more-americans-than-ever-are-enrolled-in-aca-coverage.mp3
+[2023-11-22T13:34:28.074+0545] {logging_mixin.py:154} INFO - episodes/a-laddered-continuing-resolution-explained.mp3
+[2023-11-22T13:34:28.074+0545] {logging_mixin.py:154} INFO - episodes/why-china-may-be-selling-its-u-s-debt.mp3
+[2023-11-22T13:34:28.074+0545] {logging_mixin.py:154} INFO - episodes/undergrad-workers-unionize.mp3
+[2023-11-22T13:34:28.074+0545] {logging_mixin.py:154} INFO - episodes/does-the-fed-control-the-economy.mp3
+[2023-11-22T13:34:28.074+0545] {logging_mixin.py:154} INFO - episodes/is-there-a-downside-to-economic-resilience.mp3
+[2023-11-22T13:34:28.074+0545] {logging_mixin.py:154} INFO - episodes/no-change-at-the-fed-but-what-about-the-bond-market.mp3
+[2023-11-22T13:34:28.074+0545] {logging_mixin.py:154} INFO - episodes/why-the-federal-reserve-fears-wage-spikes.mp3
+[2023-11-22T13:34:28.074+0545] {logging_mixin.py:154} INFO - episodes/americans-are-giving-the-economy-mixed-reviews.mp3
+[2023-11-22T13:34:28.074+0545] {logging_mixin.py:154} INFO - episodes/examining-health-care-inflation.mp3
+[2023-11-22T13:34:28.074+0545] {logging_mixin.py:154} INFO - episodes/hear-that-boom-its-the-economy.mp3
+[2023-11-22T13:34:28.075+0545] {logging_mixin.py:154} INFO - episodes/is-there-a-cure-for-the-nurse-shortage.mp3
+[2023-11-22T13:34:28.075+0545] {logging_mixin.py:154} INFO - episodes/part-of-the-deficit-federal-reserve-interest-costs.mp3
+[2023-11-22T13:34:28.075+0545] {logging_mixin.py:154} INFO - episodes/why-do-we-stick-to-the-default-option.mp3
+[2023-11-22T13:34:28.075+0545] {logging_mixin.py:154} INFO - episodes/night-work-hires.mp3
+[2023-11-22T13:34:28.075+0545] {logging_mixin.py:154} INFO - episodes/a-closer-look-at-unemployment-and-wealth-gap-data.mp3
+[2023-11-22T13:34:28.075+0545] {logging_mixin.py:154} INFO - episodes/how-water-moves-or-stalls-the-economy.mp3
+[2023-11-22T13:34:28.075+0545] {logging_mixin.py:154} INFO - episodes/as-covid-vigilance-dwindles-medical-companies-ail.mp3
+[2023-11-22T13:34:28.075+0545] {logging_mixin.py:154} INFO - episodes/what-does-global-trade-policy-have-to-do-with-the-climate-crisis.mp3
+[2023-11-22T13:34:28.075+0545] {logging_mixin.py:154} INFO - episodes/a-7-billion-boost-for-the-clean-hydrogen-effort.mp3
+[2023-11-22T13:34:28.075+0545] {logging_mixin.py:154} INFO - episodes/the-endless-hamster-wheel-of-inflation.mp3
+[2023-11-22T13:34:28.075+0545] {logging_mixin.py:154} INFO - episodes/ev-subsidies-are-about-to-get-simpler.mp3
+[2023-11-22T13:34:28.075+0545] {logging_mixin.py:154} INFO - episodes/fewer-americans-want-brands-to-take-political-stand.mp3
+[2023-11-22T13:34:28.075+0545] {logging_mixin.py:154} INFO - episodes/how-much-is-your-paycheck-really-worth.mp3
+[2023-11-22T13:34:28.075+0545] {logging_mixin.py:154} INFO - episodes/whats-up-with-falling-gas-prices.mp3
+[2023-11-22T13:34:28.075+0545] {logging_mixin.py:154} INFO - episodes/buying-a-home-is-a-bleak-quest-right-now.mp3
+[2023-11-22T13:34:28.075+0545] {logging_mixin.py:154} INFO - episodes/movin-out.mp3
+[2023-11-22T13:34:28.076+0545] {logging_mixin.py:154} INFO - episodes/a-high-t-note-yield-could-affect-your-wallet.mp3
+[2023-11-22T13:34:28.076+0545] {logging_mixin.py:154} INFO - episodes/millions-owe-student-loan-payments-again.mp3
+[2023-11-22T13:34:28.076+0545] {logging_mixin.py:154} INFO - episodes/plunging-u-s-crop-exports-explained.mp3
+[2023-11-22T13:34:28.076+0545] {logging_mixin.py:154} INFO - episodes/2-trillion-in-savings-spent.mp3
+[2023-11-22T13:34:28.076+0545] {logging_mixin.py:154} INFO - episodes/feeling-the-oil-flation.mp3
+[2023-11-22T13:34:28.076+0545] {logging_mixin.py:154} INFO - episodes/housing-market-role-play.mp3
+[2023-11-22T13:34:28.076+0545] {logging_mixin.py:154} INFO - episodes/the-business-of-getting-offices-back-in-business.mp3
+[2023-11-22T13:34:28.076+0545] {logging_mixin.py:154} INFO - episodes/the-early-bird-gets-the-worm.mp3
+[2023-11-22T13:34:28.076+0545] {logging_mixin.py:154} INFO - episodes/50-years-after-the-oil-embargo-the-u-s-is-playing-catch-up.mp3
+[2023-11-22T13:34:28.076+0545] {logging_mixin.py:154} INFO - episodes/do-you-advertise-en-espanol.mp3
+[2023-11-22T13:34:28.076+0545] {logging_mixin.py:154} INFO - episodes/the-facial-recognition-software-cops-are-raving-about.mp3
+[2023-11-22T13:34:28.076+0545] {logging_mixin.py:154} INFO - episodes/would-you-take-a-job-that-might-make-you-work-for-free.mp3
+[2023-11-22T13:34:28.076+0545] {logging_mixin.py:154} INFO - episodes/is-it-time-to-question-the-economic-vibe.mp3
+[2023-11-22T13:34:28.076+0545] {logging_mixin.py:154} INFO - episodes/how-to-price-an-ipo-so-it-pops.mp3
+[2023-11-22T13:34:28.076+0545] {logging_mixin.py:154} INFO - episodes/what-will-inflation-look-like-in-6-months.mp3
+[2023-11-22T13:34:28.076+0545] {python.py:194} INFO - Done. Returned value was: None
+[2023-11-22T13:34:28.079+0545] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=podcast_summery, task_id=download_episodes, execution_date=20231122T074916, start_date=20231122T074927, end_date=20231122T074928
+[2023-11-22T13:34:28.091+0545] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-11-22T13:34:28.099+0545] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

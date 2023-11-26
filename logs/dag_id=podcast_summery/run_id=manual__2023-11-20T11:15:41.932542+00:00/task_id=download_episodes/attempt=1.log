@@ -1,0 +1,30 @@
+[2023-11-20T17:00:52.882+0545] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: podcast_summery.download_episodes manual__2023-11-20T11:15:41.932542+00:00 [queued]>
+[2023-11-20T17:00:52.886+0545] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: podcast_summery.download_episodes manual__2023-11-20T11:15:41.932542+00:00 [queued]>
+[2023-11-20T17:00:52.886+0545] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-11-20T17:00:52.896+0545] {taskinstance.py:1382} INFO - Executing <Task(_PythonDecoratedOperator): download_episodes> on 2023-11-20 11:15:41.932542+00:00
+[2023-11-20T17:00:52.899+0545] {standard_task_runner.py:57} INFO - Started process 152993 to run task
+[2023-11-20T17:00:52.901+0545] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'podcast_summery', 'download_episodes', 'manual__2023-11-20T11:15:41.932542+00:00', '--job-id', '54', '--raw', '--subdir', 'DAGS_FOLDER/podcast_summery.py', '--cfg-path', '/tmp/tmpgob6f_kl']
+[2023-11-20T17:00:52.902+0545] {standard_task_runner.py:85} INFO - Job 54: Subtask download_episodes
+[2023-11-20T17:00:52.924+0545] {task_command.py:416} INFO - Running <TaskInstance: podcast_summery.download_episodes manual__2023-11-20T11:15:41.932542+00:00 [running]> on host dwarka.dwarka
+[2023-11-20T17:00:52.972+0545] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='podcast_summery' AIRFLOW_CTX_TASK_ID='download_episodes' AIRFLOW_CTX_EXECUTION_DATE='2023-11-20T11:15:41.932542+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-11-20T11:15:41.932542+00:00'
+[2023-11-20T17:00:52.974+0545] {logging_mixin.py:154} INFO - episodes/capitol-hill-doesnt-love-this-crop-insurance-program-some-farmers-say-they-need-it.mp3
+[2023-11-20T17:00:52.974+0545] {logging_mixin.py:154} INFO - Downloading capitol-hill-doesnt-love-this-crop-insurance-program-some-farmers-say-they-need-it.mp3
+[2023-11-20T17:01:21.136+0545] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/ace/aiflow_project/lib/python3.11/site-packages/airflow/decorators/base.py", line 221, in execute
+    return_value = super().execute(context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ace/aiflow_project/lib/python3.11/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ace/aiflow_project/lib/python3.11/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ace/airflow/dags/podcast_summery.py", line 66, in download_episodes
+    with open (audio_path, "wb+") as f:
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'episodes/capitol-hill-doesnt-love-this-crop-insurance-program-some-farmers-say-they-need-it.mp3'
+[2023-11-20T17:01:21.144+0545] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=podcast_summery, task_id=download_episodes, execution_date=20231120T111541, start_date=20231120T111552, end_date=20231120T111621
+[2023-11-20T17:01:21.152+0545] {standard_task_runner.py:104} ERROR - Failed to execute job 54 for task download_episodes ([Errno 2] No such file or directory: 'episodes/capitol-hill-doesnt-love-this-crop-insurance-program-some-farmers-say-they-need-it.mp3'; 152993)
+[2023-11-20T17:01:21.176+0545] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-11-20T17:01:21.188+0545] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

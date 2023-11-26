@@ -1,0 +1,78 @@
+Traceback (most recent call last):
+  File "/home/ace/data-airflow/lib/python3.11/site-packages/psutil/_pslinux.py", line 1650, in wrapper
+    return fun(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ace/data-airflow/lib/python3.11/site-packages/psutil/_common.py", line 486, in wrapper
+    raise raise_from(err, None)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 3, in raise_from
+  File "/home/ace/data-airflow/lib/python3.11/site-packages/psutil/_common.py", line 484, in wrapper
+    return fun(self)
+           ^^^^^^^^^
+  File "/home/ace/data-airflow/lib/python3.11/site-packages/psutil/_pslinux.py", line 1712, in _parse_stat_file
+    data = bcat("%s/%s/stat" % (self._procfs_path, self.pid))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ace/data-airflow/lib/python3.11/site-packages/psutil/_common.py", line 820, in bcat
+    return cat(fname, fallback=fallback, _open=open_binary)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ace/data-airflow/lib/python3.11/site-packages/psutil/_common.py", line 808, in cat
+    with _open(fname) as f:
+         ^^^^^^^^^^^^
+  File "/home/ace/data-airflow/lib/python3.11/site-packages/psutil/_common.py", line 772, in open_binary
+    return open(fname, "rb", buffering=FILE_READ_BUFFER_SIZE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/proc/47412/stat'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ace/data-airflow/lib/python3.11/site-packages/psutil/__init__.py", line 350, in _init
+    self.create_time()
+  File "/home/ace/data-airflow/lib/python3.11/site-packages/psutil/__init__.py", line 735, in create_time
+    self._create_time = self._proc.create_time()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ace/data-airflow/lib/python3.11/site-packages/psutil/_pslinux.py", line 1650, in wrapper
+    return fun(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ace/data-airflow/lib/python3.11/site-packages/psutil/_pslinux.py", line 1877, in create_time
+    ctime = float(self._parse_stat_file()['create_time'])
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ace/data-airflow/lib/python3.11/site-packages/psutil/_pslinux.py", line 1659, in wrapper
+    raise NoSuchProcess(self.pid, self._name)
+psutil.NoSuchProcess: process no longer exists (pid=47412)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ace/data-airflow/bin/airflow", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/ace/data-airflow/lib/python3.11/site-packages/airflow/__main__.py", line 57, in main
+    args.func(args)
+  File "/home/ace/data-airflow/lib/python3.11/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ace/data-airflow/lib/python3.11/site-packages/airflow/utils/cli.py", line 114, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ace/data-airflow/lib/python3.11/site-packages/airflow/utils/providers_configuration_loader.py", line 55, in wrapped_function
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ace/data-airflow/lib/python3.11/site-packages/airflow/cli/commands/webserver_command.py", line 504, in webserver
+    monitor_gunicorn(gunicorn_master_proc.pid)
+  File "/home/ace/data-airflow/lib/python3.11/site-packages/airflow/cli/commands/webserver_command.py", line 468, in monitor_gunicorn
+    ).start()
+      ^^^^^^^
+  File "/home/ace/data-airflow/lib/python3.11/site-packages/airflow/cli/commands/webserver_command.py", line 220, in start
+    self._check_workers()
+  File "/home/ace/data-airflow/lib/python3.11/site-packages/airflow/cli/commands/webserver_command.py", line 266, in _check_workers
+    num_workers_running = self._get_num_workers_running()
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ace/data-airflow/lib/python3.11/site-packages/airflow/cli/commands/webserver_command.py", line 153, in _get_num_workers_running
+    workers = psutil.Process(self.gunicorn_master_proc.pid).children()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ace/data-airflow/lib/python3.11/site-packages/psutil/__init__.py", line 313, in __init__
+    self._init(pid)
+  File "/home/ace/data-airflow/lib/python3.11/site-packages/psutil/__init__.py", line 362, in _init
+    raise NoSuchProcess(pid, msg='process PID not found')
+psutil.NoSuchProcess: process PID not found (pid=47412)

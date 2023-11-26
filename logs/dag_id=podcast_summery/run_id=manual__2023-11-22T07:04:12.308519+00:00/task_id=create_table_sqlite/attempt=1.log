@@ -1,0 +1,32 @@
+[2023-11-22T12:49:15.772+0545] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: podcast_summery.create_table_sqlite manual__2023-11-22T07:04:12.308519+00:00 [queued]>
+[2023-11-22T12:49:15.776+0545] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: podcast_summery.create_table_sqlite manual__2023-11-22T07:04:12.308519+00:00 [queued]>
+[2023-11-22T12:49:15.777+0545] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-11-22T12:49:15.789+0545] {taskinstance.py:1382} INFO - Executing <Task(SqliteOperator): create_table_sqlite> on 2023-11-22 07:04:12.308519+00:00
+[2023-11-22T12:49:15.792+0545] {standard_task_runner.py:57} INFO - Started process 251669 to run task
+[2023-11-22T12:49:15.795+0545] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'podcast_summery', 'create_table_sqlite', 'manual__2023-11-22T07:04:12.308519+00:00', '--job-id', '172', '--raw', '--subdir', 'DAGS_FOLDER/podcast_summery.py', '--cfg-path', '/tmp/tmpjobyb44b']
+[2023-11-22T12:49:15.796+0545] {standard_task_runner.py:85} INFO - Job 172: Subtask create_table_sqlite
+[2023-11-22T12:49:15.821+0545] {task_command.py:416} INFO - Running <TaskInstance: podcast_summery.create_table_sqlite manual__2023-11-22T07:04:12.308519+00:00 [running]> on host dwarka.dwarka
+[2023-11-22T12:49:15.869+0545] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='podcast_summery' AIRFLOW_CTX_TASK_ID='create_table_sqlite' AIRFLOW_CTX_EXECUTION_DATE='2023-11-22T07:04:12.308519+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-11-22T07:04:12.308519+00:00'
+[2023-11-22T12:49:15.870+0545] {sql.py:274} INFO - Executing: 
+        CREATE TABLE IF NOT EXISTS episodes(
+            link TEXT PRIMARY KEY,
+            title TEXT,
+            filename TEXT,
+            published TEXT,
+            description TEXT
+        )
+        
+[2023-11-22T12:49:15.875+0545] {base.py:73} INFO - Using connection ID 'podcasts' for task execution.
+[2023-11-22T12:49:16.038+0545] {base.py:73} INFO - Using connection ID 'podcasts' for task execution.
+[2023-11-22T12:49:16.039+0545] {sql.py:418} INFO - Running statement: 
+        CREATE TABLE IF NOT EXISTS episodes(
+            link TEXT PRIMARY KEY,
+            title TEXT,
+            filename TEXT,
+            published TEXT,
+            description TEXT
+        )
+        , parameters: None
+[2023-11-22T12:49:16.042+0545] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=podcast_summery, task_id=create_table_sqlite, execution_date=20231122T070412, start_date=20231122T070415, end_date=20231122T070416
+[2023-11-22T12:49:16.087+0545] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-11-22T12:49:16.105+0545] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check

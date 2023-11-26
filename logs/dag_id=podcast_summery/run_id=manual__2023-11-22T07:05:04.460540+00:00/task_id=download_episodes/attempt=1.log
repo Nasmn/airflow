@@ -1,0 +1,100 @@
+[2023-11-22T12:50:18.209+0545] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: podcast_summery.download_episodes manual__2023-11-22T07:05:04.460540+00:00 [queued]>
+[2023-11-22T12:50:18.216+0545] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: podcast_summery.download_episodes manual__2023-11-22T07:05:04.460540+00:00 [queued]>
+[2023-11-22T12:50:18.216+0545] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-11-22T12:50:18.228+0545] {taskinstance.py:1382} INFO - Executing <Task(_PythonDecoratedOperator): download_episodes> on 2023-11-22 07:05:04.460540+00:00
+[2023-11-22T12:50:18.232+0545] {standard_task_runner.py:57} INFO - Started process 251973 to run task
+[2023-11-22T12:50:18.234+0545] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'podcast_summery', 'download_episodes', 'manual__2023-11-22T07:05:04.460540+00:00', '--job-id', '179', '--raw', '--subdir', 'DAGS_FOLDER/podcast_summery.py', '--cfg-path', '/tmp/tmph8_02unv']
+[2023-11-22T12:50:18.235+0545] {standard_task_runner.py:85} INFO - Job 179: Subtask download_episodes
+[2023-11-22T12:50:18.259+0545] {task_command.py:416} INFO - Running <TaskInstance: podcast_summery.download_episodes manual__2023-11-22T07:05:04.460540+00:00 [running]> on host dwarka.dwarka
+[2023-11-22T12:50:18.311+0545] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='podcast_summery' AIRFLOW_CTX_TASK_ID='download_episodes' AIRFLOW_CTX_EXECUTION_DATE='2023-11-22T07:05:04.460540+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-11-22T07:05:04.460540+00:00'
+[2023-11-22T12:50:18.312+0545] {logging_mixin.py:154} INFO - episodes/happy-birthday-chatgpt.mp3
+[2023-11-22T12:50:18.313+0545] {logging_mixin.py:154} INFO - Downloading happy-birthday-chatgpt.mp3
+[2023-11-22T12:50:50.732+0545] {logging_mixin.py:154} INFO - episodes/whats-next-for-the-artificial-intelligence-industry.mp3
+[2023-11-22T12:50:50.732+0545] {logging_mixin.py:154} INFO - Downloading whats-next-for-the-artificial-intelligence-industry.mp3
+[2023-11-22T12:51:06.748+0545] {logging_mixin.py:154} INFO - episodes/capitol-hill-doesnt-love-this-crop-insurance-program-some-farmers-say-they-need-it.mp3
+[2023-11-22T12:51:06.749+0545] {logging_mixin.py:154} INFO - Downloading capitol-hill-doesnt-love-this-crop-insurance-program-some-farmers-say-they-need-it.mp3
+[2023-11-22T12:51:17.570+0545] {logging_mixin.py:154} INFO - episodes/the-calm-after-the-employment-storm.mp3
+[2023-11-22T12:51:17.579+0545] {logging_mixin.py:154} INFO - Downloading the-calm-after-the-employment-storm.mp3
+[2023-11-22T12:51:28.838+0545] {logging_mixin.py:154} INFO - episodes/milton-friedmans-impact.mp3
+[2023-11-22T12:51:28.838+0545] {logging_mixin.py:154} INFO - Downloading milton-friedmans-impact.mp3
+[2023-11-22T12:51:45.351+0545] {logging_mixin.py:154} INFO - episodes/climate-change-could-heat-up-long-term-inflation.mp3
+[2023-11-22T12:51:45.353+0545] {logging_mixin.py:154} INFO - Downloading climate-change-could-heat-up-long-term-inflation.mp3
+[2023-11-22T12:52:22.019+0545] {logging_mixin.py:154} INFO - episodes/once-again-a-shutdown-looms.mp3
+[2023-11-22T12:52:22.067+0545] {logging_mixin.py:154} INFO - Downloading once-again-a-shutdown-looms.mp3
+[2023-11-22T12:52:41.721+0545] {logging_mixin.py:154} INFO - episodes/consumers-are-feeling-scrooge-y-about-the-economy-will-they-spend-less-for-the-holidays.mp3
+[2023-11-22T12:52:41.724+0545] {logging_mixin.py:154} INFO - Downloading consumers-are-feeling-scrooge-y-about-the-economy-will-they-spend-less-for-the-holidays.mp3
+[2023-11-22T12:53:05.130+0545] {logging_mixin.py:154} INFO - episodes/more-americans-than-ever-are-enrolled-in-aca-coverage.mp3
+[2023-11-22T12:53:05.132+0545] {logging_mixin.py:154} INFO - Downloading more-americans-than-ever-are-enrolled-in-aca-coverage.mp3
+[2023-11-22T12:53:11.039+0545] {process_utils.py:131} INFO - Sending 15 to group 251973. PIDs of all processes in the group: [251973]
+[2023-11-22T12:53:11.040+0545] {process_utils.py:86} INFO - Sending the signal 15 to group 251973
+[2023-11-22T12:53:11.040+0545] {taskinstance.py:1632} ERROR - Received SIGTERM. Terminating subprocesses.
+[2023-11-22T12:53:11.047+0545] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/ace/aiflow_project/lib/python3.11/site-packages/airflow/decorators/base.py", line 221, in execute
+    return_value = super().execute(context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ace/aiflow_project/lib/python3.11/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ace/aiflow_project/lib/python3.11/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ace/airflow/dags/podcast_summery.py", line 72, in download_episodes
+    audio=requests.get(episode["enclosure"]["@url"])
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ace/aiflow_project/lib/python3.11/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ace/aiflow_project/lib/python3.11/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ace/aiflow_project/lib/python3.11/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ace/aiflow_project/lib/python3.11/site-packages/requests/sessions.py", line 725, in send
+    history = [resp for resp in gen]
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ace/aiflow_project/lib/python3.11/site-packages/requests/sessions.py", line 725, in <listcomp>
+    history = [resp for resp in gen]
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ace/aiflow_project/lib/python3.11/site-packages/requests/sessions.py", line 266, in resolve_redirects
+    resp = self.send(
+           ^^^^^^^^^^
+  File "/home/ace/aiflow_project/lib/python3.11/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ace/aiflow_project/lib/python3.11/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/ace/aiflow_project/lib/python3.11/site-packages/urllib3/connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/ace/aiflow_project/lib/python3.11/site-packages/urllib3/connectionpool.py", line 536, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/ace/aiflow_project/lib/python3.11/site-packages/urllib3/connection.py", line 461, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/http/client.py", line 1378, in getresponse
+    response.begin()
+  File "/usr/lib/python3.11/http/client.py", line 318, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/http/client.py", line 279, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/socket.py", line 706, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ssl.py", line 1311, in recv_into
+    return self.read(nbytes, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ssl.py", line 1167, in read
+    return self._sslobj.read(len, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ace/aiflow_project/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 1634, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2023-11-22T12:53:11.066+0545] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=podcast_summery, task_id=download_episodes, execution_date=20231122T070504, start_date=20231122T070518, end_date=20231122T070811
+[2023-11-22T12:53:11.086+0545] {standard_task_runner.py:104} ERROR - Failed to execute job 179 for task download_episodes (Task received SIGTERM signal; 251973)
+[2023-11-22T12:53:11.137+0545] {process_utils.py:79} INFO - Process psutil.Process(pid=251973, status='terminated', exitcode=1, started='12:50:17') (251973) terminated with exit code 1

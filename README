@@ -1,0 +1,7 @@
+To run this program:
+1. Install Apache Airflow (pip install apache-airflow)
+2. Initialize database (airflow db init)
+3. Create database (sqlite3 <database_name.db>) 
+4. Create connection string (airflow connection add '<connection_string_name>') --conn-type 'sqlite(or your database type)' --conn-host 'path/to/your/sqlite/database.db'
+
+Also make sure that variable dag_folder in airflow.cfg points to correct location

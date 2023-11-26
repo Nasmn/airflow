@@ -1,0 +1,120 @@
+[2023-11-21T17:17:40.986+0545] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: podcast_summery.download_episodes manual__2023-11-21T11:15:49.826072+00:00 [queued]>
+[2023-11-21T17:17:40.990+0545] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: podcast_summery.download_episodes manual__2023-11-21T11:15:49.826072+00:00 [queued]>
+[2023-11-21T17:17:40.991+0545] {taskinstance.py:1361} INFO - Starting attempt 2 of 1
+[2023-11-21T17:17:41.000+0545] {taskinstance.py:1382} INFO - Executing <Task(_PythonDecoratedOperator): download_episodes> on 2023-11-21 11:15:49.826072+00:00
+[2023-11-21T17:17:41.003+0545] {standard_task_runner.py:57} INFO - Started process 225152 to run task
+[2023-11-21T17:17:41.004+0545] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'podcast_summery', 'download_episodes', 'manual__2023-11-21T11:15:49.826072+00:00', '--job-id', '100', '--raw', '--subdir', 'DAGS_FOLDER/podcast_summery.py', '--cfg-path', '/tmp/tmp_hjch0ei']
+[2023-11-21T17:17:41.005+0545] {standard_task_runner.py:85} INFO - Job 100: Subtask download_episodes
+[2023-11-21T17:17:41.025+0545] {task_command.py:416} INFO - Running <TaskInstance: podcast_summery.download_episodes manual__2023-11-21T11:15:49.826072+00:00 [running]> on host dwarka.dwarka
+[2023-11-21T17:17:41.070+0545] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='podcast_summery' AIRFLOW_CTX_TASK_ID='download_episodes' AIRFLOW_CTX_EXECUTION_DATE='2023-11-21T11:15:49.826072+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-11-21T11:15:49.826072+00:00'
+[2023-11-21T17:17:41.071+0545] {logging_mixin.py:154} INFO - episodes/whats-next-for-the-artificial-intelligence-industry.mp3
+[2023-11-21T17:17:41.071+0545] {logging_mixin.py:154} INFO - episodes/capitol-hill-doesnt-love-this-crop-insurance-program-some-farmers-say-they-need-it.mp3
+[2023-11-21T17:17:41.071+0545] {logging_mixin.py:154} INFO - episodes/the-calm-after-the-employment-storm.mp3
+[2023-11-21T17:17:41.071+0545] {logging_mixin.py:154} INFO - episodes/milton-friedmans-impact.mp3
+[2023-11-21T17:17:41.071+0545] {logging_mixin.py:154} INFO - episodes/climate-change-could-heat-up-long-term-inflation.mp3
+[2023-11-21T17:17:41.071+0545] {logging_mixin.py:154} INFO - episodes/once-again-a-shutdown-looms.mp3
+[2023-11-21T17:17:41.072+0545] {logging_mixin.py:154} INFO - episodes/consumers-are-feeling-scrooge-y-about-the-economy-will-they-spend-less-for-the-holidays.mp3
+[2023-11-21T17:17:41.072+0545] {logging_mixin.py:154} INFO - episodes/more-americans-than-ever-are-enrolled-in-aca-coverage.mp3
+[2023-11-21T17:17:41.072+0545] {logging_mixin.py:154} INFO - episodes/a-laddered-continuing-resolution-explained.mp3
+[2023-11-21T17:17:41.072+0545] {logging_mixin.py:154} INFO - episodes/why-china-may-be-selling-its-u-s-debt.mp3
+[2023-11-21T17:17:41.072+0545] {logging_mixin.py:154} INFO - episodes/undergrad-workers-unionize.mp3
+[2023-11-21T17:17:41.072+0545] {logging_mixin.py:154} INFO - episodes/does-the-fed-control-the-economy.mp3
+[2023-11-21T17:17:41.072+0545] {logging_mixin.py:154} INFO - episodes/is-there-a-downside-to-economic-resilience.mp3
+[2023-11-21T17:17:41.072+0545] {logging_mixin.py:154} INFO - episodes/no-change-at-the-fed-but-what-about-the-bond-market.mp3
+[2023-11-21T17:17:41.072+0545] {logging_mixin.py:154} INFO - episodes/why-the-federal-reserve-fears-wage-spikes.mp3
+[2023-11-21T17:17:41.072+0545] {logging_mixin.py:154} INFO - episodes/americans-are-giving-the-economy-mixed-reviews.mp3
+[2023-11-21T17:17:41.072+0545] {logging_mixin.py:154} INFO - episodes/examining-health-care-inflation.mp3
+[2023-11-21T17:17:41.072+0545] {logging_mixin.py:154} INFO - episodes/hear-that-boom-its-the-economy.mp3
+[2023-11-21T17:17:41.072+0545] {logging_mixin.py:154} INFO - episodes/is-there-a-cure-for-the-nurse-shortage.mp3
+[2023-11-21T17:17:41.072+0545] {logging_mixin.py:154} INFO - episodes/part-of-the-deficit-federal-reserve-interest-costs.mp3
+[2023-11-21T17:17:41.072+0545] {logging_mixin.py:154} INFO - episodes/why-do-we-stick-to-the-default-option.mp3
+[2023-11-21T17:17:41.072+0545] {logging_mixin.py:154} INFO - episodes/night-work-hires.mp3
+[2023-11-21T17:17:41.072+0545] {logging_mixin.py:154} INFO - episodes/a-closer-look-at-unemployment-and-wealth-gap-data.mp3
+[2023-11-21T17:17:41.073+0545] {logging_mixin.py:154} INFO - episodes/how-water-moves-or-stalls-the-economy.mp3
+[2023-11-21T17:17:41.073+0545] {logging_mixin.py:154} INFO - episodes/as-covid-vigilance-dwindles-medical-companies-ail.mp3
+[2023-11-21T17:17:41.073+0545] {logging_mixin.py:154} INFO - episodes/what-does-global-trade-policy-have-to-do-with-the-climate-crisis.mp3
+[2023-11-21T17:17:41.073+0545] {logging_mixin.py:154} INFO - episodes/a-7-billion-boost-for-the-clean-hydrogen-effort.mp3
+[2023-11-21T17:17:41.073+0545] {logging_mixin.py:154} INFO - episodes/the-endless-hamster-wheel-of-inflation.mp3
+[2023-11-21T17:17:41.073+0545] {logging_mixin.py:154} INFO - Downloading the-endless-hamster-wheel-of-inflation.mp3
+[2023-11-21T17:17:54.222+0545] {logging_mixin.py:154} INFO - episodes/ev-subsidies-are-about-to-get-simpler.mp3
+[2023-11-21T17:17:54.222+0545] {logging_mixin.py:154} INFO - Downloading ev-subsidies-are-about-to-get-simpler.mp3
+[2023-11-21T17:18:03.947+0545] {logging_mixin.py:154} INFO - episodes/fewer-americans-want-brands-to-take-political-stand.mp3
+[2023-11-21T17:18:03.947+0545] {logging_mixin.py:154} INFO - Downloading fewer-americans-want-brands-to-take-political-stand.mp3
+[2023-11-21T17:18:17.498+0545] {logging_mixin.py:154} INFO - episodes/how-much-is-your-paycheck-really-worth.mp3
+[2023-11-21T17:18:17.498+0545] {logging_mixin.py:154} INFO - Downloading how-much-is-your-paycheck-really-worth.mp3
+[2023-11-21T17:18:30.076+0545] {logging_mixin.py:154} INFO - episodes/whats-up-with-falling-gas-prices.mp3
+[2023-11-21T17:18:30.077+0545] {logging_mixin.py:154} INFO - Downloading whats-up-with-falling-gas-prices.mp3
+[2023-11-21T17:19:15.162+0545] {logging_mixin.py:154} INFO - episodes/buying-a-home-is-a-bleak-quest-right-now.mp3
+[2023-11-21T17:19:15.162+0545] {logging_mixin.py:154} INFO - Downloading buying-a-home-is-a-bleak-quest-right-now.mp3
+[2023-11-21T17:19:24.915+0545] {logging_mixin.py:154} INFO - episodes/movin-out.mp3
+[2023-11-21T17:19:24.915+0545] {logging_mixin.py:154} INFO - Downloading movin-out.mp3
+[2023-11-21T17:20:35.459+0545] {process_utils.py:131} INFO - Sending 15 to group 225152. PIDs of all processes in the group: [225152]
+[2023-11-21T17:20:35.459+0545] {process_utils.py:86} INFO - Sending the signal 15 to group 225152
+[2023-11-21T17:20:35.460+0545] {taskinstance.py:1632} ERROR - Received SIGTERM. Terminating subprocesses.
+[2023-11-21T17:20:35.465+0545] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/ace/aiflow_project/lib/python3.11/site-packages/airflow/decorators/base.py", line 221, in execute
+    return_value = super().execute(context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ace/aiflow_project/lib/python3.11/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ace/aiflow_project/lib/python3.11/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ace/airflow/dags/podcast_summery.py", line 75, in download_episodes
+  File "/home/ace/aiflow_project/lib/python3.11/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ace/aiflow_project/lib/python3.11/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ace/aiflow_project/lib/python3.11/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ace/aiflow_project/lib/python3.11/site-packages/requests/sessions.py", line 725, in send
+    history = [resp for resp in gen]
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ace/aiflow_project/lib/python3.11/site-packages/requests/sessions.py", line 725, in <listcomp>
+    history = [resp for resp in gen]
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ace/aiflow_project/lib/python3.11/site-packages/requests/sessions.py", line 266, in resolve_redirects
+    resp = self.send(
+           ^^^^^^^^^^
+  File "/home/ace/aiflow_project/lib/python3.11/site-packages/requests/sessions.py", line 747, in send
+    r.content
+  File "/home/ace/aiflow_project/lib/python3.11/site-packages/requests/models.py", line 899, in content
+    self._content = b"".join(self.iter_content(CONTENT_CHUNK_SIZE)) or b""
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ace/aiflow_project/lib/python3.11/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/home/ace/aiflow_project/lib/python3.11/site-packages/urllib3/response.py", line 934, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ace/aiflow_project/lib/python3.11/site-packages/urllib3/response.py", line 877, in read
+    data = self._raw_read(amt)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/ace/aiflow_project/lib/python3.11/site-packages/urllib3/response.py", line 812, in _raw_read
+    data = self._fp_read(amt) if not fp_closed else b""
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ace/aiflow_project/lib/python3.11/site-packages/urllib3/response.py", line 797, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/http/client.py", line 466, in read
+    s = self.fp.read(amt)
+        ^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/socket.py", line 706, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ssl.py", line 1311, in recv_into
+    return self.read(nbytes, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ssl.py", line 1167, in read
+    return self._sslobj.read(len, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ace/aiflow_project/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 1634, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2023-11-21T17:20:35.471+0545] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=podcast_summery, task_id=download_episodes, execution_date=20231121T111549, start_date=20231121T113240, end_date=20231121T113535
+[2023-11-21T17:20:35.479+0545] {standard_task_runner.py:104} ERROR - Failed to execute job 100 for task download_episodes (Task received SIGTERM signal; 225152)
+[2023-11-21T17:20:35.486+0545] {process_utils.py:79} INFO - Process psutil.Process(pid=225152, status='terminated', exitcode=1, started='17:17:40') (225152) terminated with exit code 1

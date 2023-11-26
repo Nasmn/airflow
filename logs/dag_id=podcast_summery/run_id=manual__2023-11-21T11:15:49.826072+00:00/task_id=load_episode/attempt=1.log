@@ -1,0 +1,16 @@
+[2023-11-21T17:00:57.282+0545] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: podcast_summery.load_episode manual__2023-11-21T11:15:49.826072+00:00 [queued]>
+[2023-11-21T17:00:57.287+0545] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: podcast_summery.load_episode manual__2023-11-21T11:15:49.826072+00:00 [queued]>
+[2023-11-21T17:00:57.287+0545] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-11-21T17:00:57.297+0545] {taskinstance.py:1382} INFO - Executing <Task(_PythonDecoratedOperator): load_episode> on 2023-11-21 11:15:49.826072+00:00
+[2023-11-21T17:00:57.300+0545] {standard_task_runner.py:57} INFO - Started process 223216 to run task
+[2023-11-21T17:00:57.304+0545] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'podcast_summery', 'load_episode', 'manual__2023-11-21T11:15:49.826072+00:00', '--job-id', '83', '--raw', '--subdir', 'DAGS_FOLDER/podcast_summery.py', '--cfg-path', '/tmp/tmpi5e9nk73']
+[2023-11-21T17:00:57.305+0545] {standard_task_runner.py:85} INFO - Job 83: Subtask load_episode
+[2023-11-21T17:00:57.328+0545] {task_command.py:416} INFO - Running <TaskInstance: podcast_summery.load_episode manual__2023-11-21T11:15:49.826072+00:00 [running]> on host dwarka.dwarka
+[2023-11-21T17:00:57.381+0545] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='podcast_summery' AIRFLOW_CTX_TASK_ID='load_episode' AIRFLOW_CTX_EXECUTION_DATE='2023-11-21T11:15:49.826072+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-11-21T11:15:49.826072+00:00'
+[2023-11-21T17:00:57.384+0545] {base.py:73} INFO - Using connection ID 'podcasts' for task execution.
+[2023-11-21T17:00:57.392+0545] {base.py:73} INFO - Using connection ID 'podcasts' for task execution.
+[2023-11-21T17:00:57.392+0545] {sql.py:515} INFO - Done loading. Loaded a total of 0 rows into episodes
+[2023-11-21T17:00:57.392+0545] {python.py:194} INFO - Done. Returned value was: None
+[2023-11-21T17:00:57.397+0545] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=podcast_summery, task_id=load_episode, execution_date=20231121T111549, start_date=20231121T111557, end_date=20231121T111557
+[2023-11-21T17:00:57.434+0545] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-11-21T17:00:57.447+0545] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
