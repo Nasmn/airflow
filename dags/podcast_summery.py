@@ -63,7 +63,7 @@ def podcast_summery():
             filename=f"{episode['link'].split('/')[-1]}.mp3"
             audio_path=os.path.join("episodes", filename)
             print(f"{audio_path}")
-            if not os.path.exists("episodes"):
+            if not os.path.exists("./episodes"):
                 os.mkdir("episodes")
             
             if not os.path.exists(audio_path):
